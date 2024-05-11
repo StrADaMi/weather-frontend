@@ -15,12 +15,12 @@ function WeatherDay(dailyWeather) {
         <img src="${details.img}" alt="${details.desc}"/>
       </div>
       <p class="text-gray-700 mb-2">${details.desc}</p>
-      <div class="text-3xl font-bold text-gray-900 mb-6">
+      <div class="text-xl font-bold text-gray-900 mb-6 whitespace-nowrap">
         ${dailyWeather.minTemperature}º <span class="font-normal text-gray-700 mx-1">/</span> ${dailyWeather.maxTemperature}º
       </div>
-      <div>
-          <span class="text-sm">Estimated energy:</span> 
-          <span class="text-sm font-bold">${dailyWeather.estimatedEnergyProductionInKWh} kW/h</span> 
+      <div class="whitespace-nowrap">
+          <span class="text-sm">Energy:</span>
+          <span class="text-sm font-bold">${Math.round(dailyWeather.estimateEnergyProductionInKWh * 100) / 100} kW/h</span>
     </div>
     </div>
   `
