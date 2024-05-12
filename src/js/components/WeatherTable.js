@@ -1,7 +1,7 @@
 import weatherDay from "./WeatherDay.js";
 
 async function WeatherTable(cords) {
-const response = await fetch(`http://localhost:8082/api/v1/weather/daily?latitude=${cords.lat}&longitude=${cords.lng}`);
+const response = await fetch(`${API_URL}api/v1/weather/daily?latitude=${cords.lat}&longitude=${cords.lng}`);
 const data = await response.json();
   return `
     <div>
